@@ -16,8 +16,6 @@ footer {
 footer>div {
     flex: 1;
     height: 100%;
-    /* Delete */
-    border: 1px solid red;
     display: flex;
     align-items: center;
 }
