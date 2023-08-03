@@ -1,0 +1,12 @@
+.time{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+}
+.time > div > p {
+    margin-right: 15px;
+    text-align: right;
+}
