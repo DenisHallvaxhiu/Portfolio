@@ -13,14 +13,16 @@ export default function Main() {
   const generateDelay = (index) =>{
     return index*0.1
   }
-
+  const test = ()=>{
+    console.log("testing")
+  }
   const apps = [
-    { icon: Project, header: "Projects", shortcut: false },
-    { icon: Resume, header: "Resume", shortcut: false },
-    { icon: Github, header: "Github", shortcut: false },
-    { icon: LinkedIn, header: "LinkedIn", shortcut: false },
-    { icon: Fullscreen, header: "Fullscreen", shortcut: false },
-    { icon: MacApple, header: "Mac", shortcut: false },
+    { icon: Project, header: "Projects", shortcut: false , function : ()=>{test()}},
+    { icon: Resume, header: "Resume", shortcut: false , function : ()=>{console.log(apps[0].header)}},
+    { icon: Github, header: "Github", shortcut: false , function : ()=>{console.log(apps[0].header)}},
+    { icon: LinkedIn, header: "LinkedIn", shortcut: false , function : ()=>{console.log(apps[0].header)}},
+    { icon: Fullscreen, header: "Fullscreen", shortcut: false , function : ()=>{console.log(apps[0].header)}},
+    { icon: MacApple, header: "Mac", shortcut: false , function : ()=>{console.log(apps[0].header)}},
   ];
   return (
     <main className="main">
@@ -30,6 +32,7 @@ export default function Main() {
             initial= {{scale:0}}
             animate= {{scale:1}}
             transition={{ duration:0.2, delay: generateDelay(index)}}
+            onClick={content.function}
           >
             <img src={content.icon} alt="" />
             <h3>{content.header}</h3>
