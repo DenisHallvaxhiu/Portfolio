@@ -13,11 +13,25 @@
     flex-direction: column;
     justify-content: flex-start;
     align-content: flex-start;
-    padding: 3%;
-    gap: 50px 50px;
+    padding: 2%;
+    gap: 20px 20px;
 }
 .app-container > div{
     width: 70px;
-    height: 70px;
-    background-color: red;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.app-container > div:hover{
+    cursor: pointer;
+}
+.app-container > div > img{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+.app-container > div > h3{
+    color: white;
 }
