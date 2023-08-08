@@ -15,6 +15,7 @@ export default function Main() {
   };
   const test = () => {
     console.log("testing");
+    document.body.requestFullscreen()
   };
 
   const openLinkedInPage = () => {
