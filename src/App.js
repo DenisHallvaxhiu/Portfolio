@@ -6,7 +6,7 @@ import Main from './components/Main/Main';
 function App() {
   return (
     <div className='app'>
-      <img src={Background}/>
+      <img src={Background} alt='Background'/>
       <Main/>
       <Footer/>
     </div>

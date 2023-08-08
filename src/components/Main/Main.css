@@ -3,7 +3,6 @@
     top: 0;
     width: 100vw;
     height: calc(100vh - 55px);
-
 }
 .main > .app-container{
     width: 100%;
@@ -33,5 +32,6 @@
     border-radius: 5px;
 }
 .app-container > div > h3{
+    text-align: center;
     color: white;
 }

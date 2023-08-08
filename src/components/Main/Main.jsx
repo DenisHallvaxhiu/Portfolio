@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./Main.css";
 import Project from "../../assets/Projects.png";
@@ -7,17 +7,30 @@ import Github from "../../assets/Github.png";
 import LinkedIn from "../../assets/LinkedIn.png";
 import Fullscreen from "../../assets/FullScreen.png";
 import MacApple from "../../assets/MacApple.png";
-import ResumePdf from "../../assets/Resume/Resume+Denis+Hallvaxhiu.pdf"
+import ResumePdf from "../../assets/Resume/Resume+Denis+Hallvaxhiu.pdf";
+import ProjectsModal from "../ProjectsModal/ProjectsModal";
 
 export default function Main() {
+
+  const [fullScreen,setFullScreen] = useState(false)
+  const [openProjectModal, setOpenProjectModal] = useState(false)
+
   const generateDelay = (index) => {
     return index * 0.1;
   };
-  const test = () => {
-    console.log("testing");
-    document.body.requestFullscreen()
+  const openProjectModalFunc = () => {
+    setOpenProjectModal(true)
   };
-
+  const fullScreenFunc = () => {
+    if (document.fullscreenElement === null) {
+      document.body.requestFullscreen();
+      setFullScreen(true)
+    }
+    else{
+      document.exitFullscreen();
+      setFullScreen(false)
+    }
+  };
   const openLinkedInPage = () => {
     window.open(
       "https://www.linkedin.com/in/denis-hallvaxhiu-0bb86a226/",
@@ -29,7 +42,7 @@ export default function Main() {
   };
 
   const openResumeInPage = () => {
-    window.open(ResumePdf, "_blank")
+    window.open(ResumePdf, "_blank");
   };
   const apps = [
     {
@@ -37,7 +50,7 @@ export default function Main() {
       header: "Projects",
       shortcut: false,
       function: () => {
-        test();
+        openProjectModalFunc()
       },
     },
     {
@@ -66,10 +79,10 @@ export default function Main() {
     },
     {
       icon: Fullscreen,
-      header: "Fullscreen",
+      header: !fullScreen ? "Fullscreen" : "Exit Fullscreen",
       shortcut: false,
       function: () => {
-        console.log(apps[0].header);
+        fullScreenFunc();
       },
     },
     {
@@ -96,6 +109,7 @@ export default function Main() {
           </motion.div>
         ))}
       </div>
+          <ProjectsModal open={openProjectModal} close={()=> setOpenProjectModal(false)}/>
     </main>
   );
 }
