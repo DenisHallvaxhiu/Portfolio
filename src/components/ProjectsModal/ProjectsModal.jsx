@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./ProjectsModal.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { PacmanLoader } from "react-spinners";
+import ProjectCard from "../ProjectCard/ProjectCard";
 
 export default function ProjectsModal({ open, close }) {
   const [loading, setLoading] = useState(false);
@@ -11,7 +12,7 @@ export default function ProjectsModal({ open, close }) {
       setLoading(true);
       setTimeout(() => {
         setLoading(false);
-      }, 3000);
+      }, 1000);
     }
   }, [open]);
 
@@ -33,7 +34,18 @@ export default function ProjectsModal({ open, close }) {
             {loading ? (
               <PacmanLoader size={40} color="#36d7b7" />
             ) : (
-              <div className="test"></div>
+              <div className="project-container">
+                <h1>My Projects</h1>
+                <hr />
+                <div className="projects">
+                  <div>
+                    <ProjectCard />
+                  </div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
             )}
           </div>
         </motion.div>

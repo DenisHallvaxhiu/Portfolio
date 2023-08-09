@@ -38,8 +38,30 @@
     height: 100%;
 }
 
-.modal > .modal-div > .test{
+.modal > .modal-div > .project-container{
     width: 100%;
     height: 100%;
+}
+.project-container > h1{
+    padding: 1% 2%;
+    color: white;
+}
+.project-container > hr{
+    width: 96%;
+    margin: 0 auto;
+    border-color: gray;
+}
+.project-container > .projects{
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5%;
+}
+.projects > div{
+    width: 47%;
+    height: 400px;
     background-color: red;
 }
