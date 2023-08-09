@@ -7,28 +7,27 @@ import Github from "../../assets/Github.png";
 import LinkedIn from "../../assets/LinkedIn.png";
 import Fullscreen from "../../assets/FullScreen.png";
 import MacApple from "../../assets/MacApple.png";
+import Shortcut from "../../assets/Shortcut.png";
 import ResumePdf from "../../assets/Resume/Resume+Denis+Hallvaxhiu.pdf";
 import ProjectsModal from "../ProjectsModal/ProjectsModal";
 
 export default function Main() {
-
-  const [fullScreen,setFullScreen] = useState(false)
-  const [openProjectModal, setOpenProjectModal] = useState(false)
+  const [fullScreen, setFullScreen] = useState(false);
+  const [openProjectModal, setOpenProjectModal] = useState(false);
 
   const generateDelay = (index) => {
     return index * 0.1;
   };
   const openProjectModalFunc = () => {
-    setOpenProjectModal(true)
+    setOpenProjectModal(true);
   };
   const fullScreenFunc = () => {
     if (document.fullscreenElement === null) {
       document.body.requestFullscreen();
-      setFullScreen(true)
-    }
-    else{
+      setFullScreen(true);
+    } else {
       document.exitFullscreen();
-      setFullScreen(false)
+      setFullScreen(false);
     }
   };
   const openLinkedInPage = () => {
@@ -48,9 +47,9 @@ export default function Main() {
     {
       icon: Project,
       header: "Projects",
-      shortcut: false,
+      shortcut: true,
       function: () => {
-        openProjectModalFunc()
+        openProjectModalFunc();
       },
     },
     {
@@ -64,7 +63,7 @@ export default function Main() {
     {
       icon: Github,
       header: "Github",
-      shortcut: false,
+      shortcut: true,
       function: () => {
         openGithubPage();
       },
@@ -72,7 +71,7 @@ export default function Main() {
     {
       icon: LinkedIn,
       header: "LinkedIn",
-      shortcut: false,
+      shortcut: true,
       function: () => {
         openLinkedInPage();
       },
@@ -105,11 +104,15 @@ export default function Main() {
             onClick={content.function}
           >
             <img src={content.icon} alt="" />
+            {content.shortcut && <img className="shortcut" src={Shortcut} alt="" />}
             <h3>{content.header}</h3>
           </motion.div>
         ))}
       </div>
-          <ProjectsModal open={openProjectModal} close={()=> setOpenProjectModal(false)}/>
+      <ProjectsModal
+        open={openProjectModal}
+        close={() => setOpenProjectModal(false)}
+      />
     </main>
   );
 }

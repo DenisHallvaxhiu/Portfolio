@@ -19,6 +19,7 @@
     width: 70px;
     height: 80px;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -34,4 +35,11 @@
 .app-container > div > h3{
     text-align: center;
     color: white;
+}
+.app-container > div > .shortcut{
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    bottom: 20px;
+    left: 5px;
 }
