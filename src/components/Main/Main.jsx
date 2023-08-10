@@ -13,7 +13,7 @@ import ProjectsModal from "../ProjectsModal/ProjectsModal";
 
 export default function Main() {
   const [fullScreen, setFullScreen] = useState(false);
-  const [openProjectModal, setOpenProjectModal] = useState(false);
+  const [openProjectModal, setOpenProjectModal] = useState(true);
 
   const generateDelay = (index) => {
     return index * 0.1;

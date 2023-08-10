@@ -3,6 +3,10 @@ import "./ProjectsModal.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { PacmanLoader } from "react-spinners";
 import ProjectCard from "../ProjectCard/ProjectCard";
+import NBA from "../../assets/nba-logo.jpg";
+import NBAImage from "../../assets/nba-image.avif"
+import PGALogo from "../../assets/PGA_Tour_logo.png"
+import PGAImage from "../../assets/PGA_Tour_image.jpg"
 
 export default function ProjectsModal({ open, close }) {
   const [loading, setLoading] = useState(false);
@@ -12,9 +16,18 @@ export default function ProjectsModal({ open, close }) {
       setLoading(true);
       setTimeout(() => {
         setLoading(false);
-      }, 3000);
+      }, 1500);
     }
   }, [open]);
+
+  const ProjectCards = [
+    {logo:NBA,image:NBAImage, header: "National Basketball Association", topic:"Sports", type:"Website Application"},
+    {logo:PGALogo,image:PGAImage, header: "PGA TOUR", topic:"Sports", type:"Website Application"},
+    {logo:NBA,image:NBAImage, header: "National Basketball Association", topic:"Sports", type:"Website Application"},
+    {logo:NBA,image:NBAImage, header: "National Basketball Association", topic:"Sports", type:"Website Application"},
+    {logo:NBA,image:NBAImage, header: "National Basketball Association", topic:"Sports", type:"Website Application"},
+  ]
+
 
   return (
     <AnimatePresence>
@@ -38,12 +51,11 @@ export default function ProjectsModal({ open, close }) {
                 <h1>My Projects</h1>
                 <hr />
                 <div className="projects">
-                  <div>
-                    <ProjectCard />
-                  </div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
+                  {
+                    ProjectCards.map((context,index)=>(
+                      <ProjectCard logo={context.logo} image={context.image} header={context.header} topic={context.topic} type={context.type}/>
+                    ))
+                  }
                 </div>
               </div>
             )}

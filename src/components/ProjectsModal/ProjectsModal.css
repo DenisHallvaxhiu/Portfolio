@@ -3,8 +3,8 @@
     background-color: #303030;
     z-index: 1000;
     width: 70%;
-    height: 70%;
-    top: 15%;
+    height: 90%;
+    top: 5%;
     left: 15%;
     overflow-y: scroll;
     border-radius: 20px;
@@ -63,5 +63,4 @@
 .projects > div{
     width: 47%;
     height: 400px;
-    background-color: red;
 }
