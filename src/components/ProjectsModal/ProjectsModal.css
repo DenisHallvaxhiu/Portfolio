@@ -67,12 +67,14 @@
     height: 400px;
 }
 .modal > .projectInfo{
-    position: absolute;
+    position: fixed;
     background-color: #303030;
-    height: 100%;
-    width: 100%;
+    width: 70%;
+    height: calc(90% - 50px);
+    overflow-x: hidden;
+    overflow-y: scroll;
     border-radius: 20px;
-    top: 0;
+    top: calc(5% - 2px);
     margin-left: 100%;
     transition: margin 0.5s ease-in-out;
 }

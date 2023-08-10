@@ -37,6 +37,10 @@ export default function ProjectsModal({ open, close }) {
       header: "National Basketball Association",
       topic: "Sports",
       type: "Website Application",
+      company: "Service Express",
+      language: "English",
+      languageLogo: "EN",
+      platform:"Website"
     },
     {
       id: 1,
@@ -45,6 +49,10 @@ export default function ProjectsModal({ open, close }) {
       header: "PGA TOUR",
       topic: "Sports",
       type: "Website Application",
+      company: "Service Express",
+      language: "English",
+      languageLogo: "EN",
+      platform:"Website"
     },
     {
       id: 2,
@@ -53,6 +61,10 @@ export default function ProjectsModal({ open, close }) {
       header: "Major League Baseball",
       topic: "Sports",
       type: "Website Application",
+      company: "Service Express",
+      language: "English",
+      languageLogo: "EN",
+      platform:"Website"
     },
     {
       id: 3,
@@ -61,6 +73,10 @@ export default function ProjectsModal({ open, close }) {
       header: "UEFA Champions League",
       topic: "Sports",
       type: "Website Application",
+      company: "Service Express",
+      language: "English",
+      languageLogo: "EN",
+      platform:"Website"
     },
     {
       id: 4,
@@ -69,6 +85,10 @@ export default function ProjectsModal({ open, close }) {
       header: "National Football League",
       topic: "Sports",
       type: "Website Application",
+      company: "Service Express",
+      language: "English",
+      languageLogo: "EN",
+      platform:"Website"
     },
   ];
 
