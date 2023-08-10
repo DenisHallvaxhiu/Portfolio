@@ -114,6 +114,7 @@ export default function Main() {
         open={openProjectModal}
         close={() => setOpenProjectModal(false)}
       />
+
     </main>
   );
 }

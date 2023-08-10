@@ -4,19 +4,21 @@ import { motion, AnimatePresence } from "framer-motion";
 import { PacmanLoader } from "react-spinners";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import NBA from "../../assets/nba-logo.jpg";
-import NBAImage from "../../assets/nba-image.avif"
-import PGALogo from "../../assets/PGA_Tour_logo.png"
-import PGAImage from "../../assets/PGA_Tour_image.jpg"
-import MLBLogo from "../../assets/MLB.png"
-import MLBImage from "../../assets/MLB_Image.png"
-import SoccerLogo from "../../assets/Soccer.png"
-import SoccerImage from "../../assets/Soccer_Image.webp"
-import NFL from "../../assets/NFL.svg"
-import NFLImage from "../../assets/NFL_image.webp"
-
+import NBAImage from "../../assets/nba-image.avif";
+import PGALogo from "../../assets/PGA_Tour_logo.png";
+import PGAImage from "../../assets/PGA_Tour_image.jpg";
+import MLBLogo from "../../assets/MLB.png";
+import MLBImage from "../../assets/MLB_Image.png";
+import SoccerLogo from "../../assets/Soccer.png";
+import SoccerImage from "../../assets/Soccer_Image.webp";
+import NFL from "../../assets/NFL.svg";
+import NFLImage from "../../assets/NFL_image.webp";
+import ProjectInfo from "../ProjectInfo/ProjectInfo";
 
 export default function ProjectsModal({ open, close }) {
   const [loading, setLoading] = useState(false);
+  const [startAnimation, setStartAnimation] = useState(false);
+  const [project, setProject] = useState(0);
 
   useEffect(() => {
     if (open) {
@@ -28,13 +30,49 @@ export default function ProjectsModal({ open, close }) {
   }, [open]);
 
   const ProjectCards = [
-    {logo:NBA,image:NBAImage, header: "National Basketball Association", topic:"Sports", type:"Website Application"},
-    {logo:PGALogo,image:PGAImage, header: "PGA TOUR", topic:"Sports", type:"Website Application"},
-    {logo:MLBLogo,image:MLBImage, header: "Major League Baseball", topic:"Sports", type:"Website Application"},
-    {logo:SoccerLogo,image:SoccerImage, header: "UEFA Champions League", topic:"Sports", type:"Website Application"},
-    {logo:NFL,image:NFLImage, header: "National Football League", topic:"Sports", type:"Website Application"},
-  ]
+    {
+      id: 0,
+      logo: NBA,
+      image: NBAImage,
+      header: "National Basketball Association",
+      topic: "Sports",
+      type: "Website Application",
+    },
+    {
+      id: 1,
+      logo: PGALogo,
+      image: PGAImage,
+      header: "PGA TOUR",
+      topic: "Sports",
+      type: "Website Application",
+    },
+    {
+      id: 2,
+      logo: MLBLogo,
+      image: MLBImage,
+      header: "Major League Baseball",
+      topic: "Sports",
+      type: "Website Application",
+    },
+    {
+      id: 3,
+      logo: SoccerLogo,
+      image: SoccerImage,
+      header: "UEFA Champions League",
+      topic: "Sports",
+      type: "Website Application",
+    },
+    {
+      id: 4,
+      logo: NFL,
+      image: NFLImage,
+      header: "National Football League",
+      topic: "Sports",
+      type: "Website Application",
+    },
+  ];
 
+  const transitionProperties = startAnimation ? { marginLeft: "0" } : {};
 
   return (
     <AnimatePresence>
@@ -45,8 +83,18 @@ export default function ProjectsModal({ open, close }) {
           exit={{ scale: 0 }}
           transition={{ ease: "easeOut", duration: 0.2 }}
           className="modal"
-        >
-          <button onClick={close} type="button" className="btn-close">
+          style={{
+            overflowY: startAnimation ? 'visible' : '',
+          }}
+          >
+          <button
+            onClick={() => {
+              setStartAnimation(false);
+              close();
+            }}
+            type="button"
+            className="btn-close"
+          >
             <span className="icon-cross"></span>
             <span className="visually-hidden">X</span>
           </button>
@@ -55,17 +103,38 @@ export default function ProjectsModal({ open, close }) {
               <PacmanLoader size={40} color="#36d7b7" />
             ) : (
               <div className="project-container">
-                <h1>My Projects</h1>
+                <h1>
+                  My Projects
+                </h1>
                 <hr />
                 <div className="projects">
-                  {
-                    ProjectCards.map((context,index)=>(
-                      <ProjectCard logo={context.logo} image={context.image} header={context.header} topic={context.topic} type={context.type}/>
-                    ))
-                  }
+                  {ProjectCards.map((context) => (
+                    <div
+                      key={context.id}
+                      onClick={() => {
+                        setProject(context.id);
+                        setStartAnimation(!startAnimation)
+                      }}
+                    >
+                      <ProjectCard
+                        logo={context.logo}
+                        image={context.image}
+                        header={context.header}
+                        topic={context.topic}
+                        type={context.type}
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             )}
+          </div>
+
+          <div className="projectInfo" style={transitionProperties}>
+            <ProjectInfo
+              object={ProjectCards[project]}
+              close={() => setStartAnimation(!startAnimation)}
+            />
           </div>
         </motion.div>
       )}

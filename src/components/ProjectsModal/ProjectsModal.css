@@ -8,6 +8,7 @@
     left: 15%;
     overflow-y: scroll;
     border-radius: 20px;
+    overflow-x: hidden;
 }
 
 .btn-close {
@@ -26,6 +27,7 @@
     align-items: center;
     cursor: pointer;
     transition: all 150ms;
+    z-index: 100;
 }
 .btn-close:hover,.btn-close:focus{
     transform: rotateZ(180deg);
@@ -63,4 +65,14 @@
 .projects > div{
     width: 47%;
     height: 400px;
+}
+.modal > .projectInfo{
+    position: absolute;
+    background-color: #303030;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    top: 0;
+    margin-left: 100%;
+    transition: margin 0.5s ease-in-out;
 }
