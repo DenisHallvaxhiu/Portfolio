@@ -102,6 +102,7 @@ export default function Main() {
             animate={{ scale: 1 }}
             transition={{ duration: 0.2, delay: generateDelay(index) }}
             onClick={content.function}
+            key={index}
           >
             <img src={content.icon} alt="" />
             {content.shortcut && <img className="shortcut" src={Shortcut} alt="" />}
