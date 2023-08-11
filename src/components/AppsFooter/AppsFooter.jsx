@@ -7,11 +7,11 @@ import Projects from "../../assets/Projects.png"
 import Email from "../../assets/Email.png"
 import Calendar from "../../assets/Calendar.png"
 
-export default function AppsFooter() {
+export default function AppsFooter({click}) {
   return (
     <div className="AppsFooter">
       <button>
-        <img src={StartMenu} alt="" />
+        <img onClick={click} src={StartMenu} alt="" />
         <span>Start Menu</span>
       </button>
       <button>
