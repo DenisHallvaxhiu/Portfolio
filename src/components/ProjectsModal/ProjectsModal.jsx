@@ -40,7 +40,11 @@ export default function ProjectsModal({ open, close }) {
       company: "Service Express",
       language: "English",
       languageLogo: "EN",
-      platform:"Website"
+      platform: "Website",
+      time: "Jan 2023 - May 2023",
+      about: "Live results and more about ......",
+      team: 1,
+      duration : "4 months"
     },
     {
       id: 1,
@@ -52,7 +56,11 @@ export default function ProjectsModal({ open, close }) {
       company: "Service Express",
       language: "English",
       languageLogo: "EN",
-      platform:"Website"
+      platform: "Website",
+      time: "Jan 2023 - May 2023",
+      about: "Live results and more about ......",
+      team: 1,
+      duration : "4 months"
     },
     {
       id: 2,
@@ -64,7 +72,11 @@ export default function ProjectsModal({ open, close }) {
       company: "Service Express",
       language: "English",
       languageLogo: "EN",
-      platform:"Website"
+      platform: "Website",
+      time: "Jan 2023 - May 2023",
+      about: "Live results and more about ......",
+      team: 1,
+      duration : "4 months"
     },
     {
       id: 3,
@@ -76,7 +88,11 @@ export default function ProjectsModal({ open, close }) {
       company: "Service Express",
       language: "English",
       languageLogo: "EN",
-      platform:"Website"
+      platform: "Website",
+      time: "Jan 2023 - May 2023",
+      about: "Live results and more about ......",
+      team: 1,
+      duration : "4 months"
     },
     {
       id: 4,
@@ -88,7 +104,11 @@ export default function ProjectsModal({ open, close }) {
       company: "Service Express",
       language: "English",
       languageLogo: "EN",
-      platform:"Website"
+      platform: "Website",
+      time: "Jan 2023 - May 2023",
+      about: "Live results and more about ......",
+      team: 1,
+      duration : "4 months"
     },
   ];
 
@@ -104,9 +124,9 @@ export default function ProjectsModal({ open, close }) {
           transition={{ ease: "easeOut", duration: 0.2 }}
           className="modal"
           style={{
-            overflowY: startAnimation ? 'visible' : '',
+            overflowY: startAnimation ? "visible" : "",
           }}
-          >
+        >
           <button
             onClick={() => {
               setStartAnimation(false);
@@ -123,9 +143,7 @@ export default function ProjectsModal({ open, close }) {
               <PacmanLoader size={40} color="#36d7b7" />
             ) : (
               <div className="project-container">
-                <h1>
-                  My Projects
-                </h1>
+                <h1>My Projects</h1>
                 <hr />
                 <div className="projects">
                   {ProjectCards.map((context) => (
@@ -133,7 +151,7 @@ export default function ProjectsModal({ open, close }) {
                       key={context.id}
                       onClick={() => {
                         setProject(context.id);
-                        setStartAnimation(!startAnimation)
+                        setStartAnimation(!startAnimation);
                       }}
                     >
                       <ProjectCard
