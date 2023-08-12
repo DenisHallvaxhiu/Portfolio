@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "./Main.css";
 import Project from "../../assets/Projects.png";
@@ -11,9 +11,10 @@ import Shortcut from "../../assets/Shortcut.png";
 import ResumePdf from "../../assets/Resume/Resume+Denis+Hallvaxhiu.pdf";
 import ProjectsModal from "../ProjectsModal/ProjectsModal";
 
-export default function Main() {
+export default function Main({ check }) {
   const [fullScreen, setFullScreen] = useState(false);
   const [openProjectModal, setOpenProjectModal] = useState(false);
+  const [count, setCount] = useState(0);
 
   const generateDelay = (index) => {
     return index * 0.1;
@@ -43,6 +44,15 @@ export default function Main() {
   const openResumeInPage = () => {
     window.open(ResumePdf, "_blank");
   };
+  useEffect(() => {
+    if (count > 1) {
+      setOpenProjectModal(true);
+    } else {
+      setCount(prevCount => prevCount + 1);
+    }
+    /* eslint-disable */
+  }, [check]);
+
   const apps = [
     {
       icon: Project,
@@ -105,7 +115,9 @@ export default function Main() {
             key={index}
           >
             <img src={content.icon} alt="" />
-            {content.shortcut && <img className="shortcut" src={Shortcut} alt="" />}
+            {content.shortcut && (
+              <img className="shortcut" src={Shortcut} alt="" />
+            )}
             <h3>{content.header}</h3>
           </motion.div>
         ))}
@@ -114,7 +126,6 @@ export default function Main() {
         open={openProjectModal}
         close={() => setOpenProjectModal(false)}
       />
-
     </main>
   );
 }

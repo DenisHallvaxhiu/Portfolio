@@ -19,6 +19,7 @@ export default function ProjectsModal({ open, close }) {
   const [loading, setLoading] = useState(false);
   const [startAnimation, setStartAnimation] = useState(false);
   const [project, setProject] = useState(0);
+ 
 
   useEffect(() => {
     if (open) {
