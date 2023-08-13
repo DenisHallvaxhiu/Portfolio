@@ -6,7 +6,7 @@ import Resume from "../../assets/PDFResume.png";
 import Github from "../../assets/Github.png";
 import LinkedIn from "../../assets/LinkedIn.png";
 import Fullscreen from "../../assets/FullScreen.png";
-import MacApple from "../../assets/MacApple.png";
+// import MacApple from "../../assets/MacApple.png";
 import Shortcut from "../../assets/Shortcut.png";
 import ResumePdf from "../../assets/Resume/Resume+Denis+Hallvaxhiu.pdf";
 import ProjectsModal from "../ProjectsModal/ProjectsModal";
@@ -94,14 +94,14 @@ export default function Main({ check }) {
         fullScreenFunc();
       },
     },
-    {
-      icon: MacApple,
-      header: "Mac",
-      shortcut: false,
-      function: () => {
-        console.log(apps[0].header);
-      },
-    },
+    // {
+    //   icon: MacApple,
+    //   header: "Mac",
+    //   shortcut: false,
+    //   function: () => {
+    //     console.log(apps[0].header);
+    //   },
+    // },
   ];
   return (
     <main className="main">
