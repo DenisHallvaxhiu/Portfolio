@@ -18,7 +18,7 @@ export default function AppsFooter({click}) {
 
   const openWebsite = () =>{
     // Change the link when in production
-    window.open("http://localhost:3000/", "_blank")
+    window.open("https://denis-hallvaxhiu-portfolio.netlify.app/", "_blank")
   }
   const openSchedule = () => {
     window.open("https://calendly.com/denis-hallvaxhiu/30min", "_blank")

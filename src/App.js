@@ -32,7 +32,7 @@ function App() {
       navigator.share({
         text: "Portfolio Website - Denis Hallvaxhiu",
         // Change when pushed
-        url: "http://localhost:3000/",
+        url: "https://denis-hallvaxhiu-portfolio.netlify.app/",
         title: "Portfolio"
       })
     }
