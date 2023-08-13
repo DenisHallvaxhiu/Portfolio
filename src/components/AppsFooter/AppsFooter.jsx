@@ -7,7 +7,17 @@ import Projects from "../../assets/Projects.png"
 import Email from "../../assets/Email.png"
 import Calendar from "../../assets/Calendar.png"
 
+
+
 export default function AppsFooter({click}) {
+
+  const recipientEmail = 'dhallvaxhiu999@gmail.com';
+
+  const handleEmailClick = () => {
+    window.location.href = `mailto:${recipientEmail}`;
+  };
+  
+
   return (
     <div className="AppsFooter">
       <button>
@@ -18,11 +28,7 @@ export default function AppsFooter({click}) {
         <img src={MicrosoftEdge} alt="" />
         <span>Visit my website</span>
       </button>
-      <button>
-        <img src={Projects} alt="" />
-        <span>View my projects</span>
-      </button>
-      <button>
+      <button onClick={handleEmailClick}>
         <img src={Email} alt="" />
         <span>Send me an email</span>
       </button>

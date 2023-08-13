@@ -9,16 +9,24 @@ import Resume from "./assets/PDFResume.png";
 import Github from "./assets/Github.png";
 import LinkedIn from "./assets/LinkedIn.png";
 import Profile from "./assets/Profile.png";
-import Phone from "./assets/Phone.png"
-import Mail from "./assets/Mail.png"
-import Share from "./assets/Share.png"
+import Phone from "./assets/Phone.png";
+import Mail from "./assets/Mail.png";
+import Share from "./assets/Share.png";
 import ResumePdf from "./assets/Resume/Resume+Denis+Hallvaxhiu.pdf";
+import Up from "./assets/Up.png"
+
 
 function App() {
   const [startMenu, setStartMenu] = useState(false);
   const [startMenuExpanded, setStartMenuExpanded] = useState(false);
-  const [openModal,setOpenModal] = useState(false)
+  const [openModal, setOpenModal] = useState(false);
   let startMenuRef = useRef();
+
+  const recipientEmail = 'dhallvaxhiu999@gmail.com';
+
+  const handleEmailClick = () => {
+    window.location.href = `mailto:${recipientEmail}`;
+  };
 
   useEffect(() => {
     let handler = (e) => {
@@ -55,7 +63,7 @@ function App() {
     <div className="app">
       <div>
         <img src={Background} alt="Background" />
-        <Main check={openModal} close={()=>setOpenModal(false)}/>
+        <Main check={openModal} close={() => setOpenModal(false)} />
         <Footer
           open={() => {
             setStartMenu(!startMenu);
@@ -75,7 +83,13 @@ function App() {
             >
               <div className="upper">
                 <div className="application-container">
-                  <div onClick={()=>{setOpenModal(true);setTimeout(()=>setOpenModal(false),100)}} className="applications">
+                  <div
+                    onClick={() => {
+                      setOpenModal(true);
+                      setTimeout(() => setOpenModal(false), 100);
+                    }}
+                    className="applications"
+                  >
                     <img src={Project} alt="" />
                     <h2>Project</h2>
                   </div>
@@ -141,13 +155,17 @@ function App() {
                     <span>Web Developer</span>
                   </div>
                 </div>
-                <div>
+                {startMenuExpanded ? (
                   <div>
-                    <img src={Phone} alt="test"/>
-                    <img src={Mail} alt="test"/>
-                    <img src={Share} alt="test"/>
+                    <img src={Phone} alt="Phone" />
+                    <img onClick={handleEmailClick} src={Mail} alt="Mail" />
+                    <img src={Share} alt="Share" />
                   </div>
-                </div>
+                ) : (
+                  <div>
+                    <img src={Up} alt="Phone" />
+                  </div>
+                )}
               </div>
             </div>
           </motion.div>

@@ -116,3 +116,6 @@
   width: 25px;
   height: 25px;
 }
+.lower > div > img{
+  cursor: pointer;
+}
