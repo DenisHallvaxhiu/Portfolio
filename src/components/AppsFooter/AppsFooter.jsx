@@ -3,7 +3,6 @@ import "./AppsFooter.css";
 
 import StartMenu from "../../assets/startMenu.png"
 import MicrosoftEdge from "../../assets/MicrosoftEdge.png"
-import Projects from "../../assets/Projects.png"
 import Email from "../../assets/Email.png"
 import Calendar from "../../assets/Calendar.png"
 
@@ -16,7 +15,14 @@ export default function AppsFooter({click}) {
   const handleEmailClick = () => {
     window.location.href = `mailto:${recipientEmail}`;
   };
-  
+
+  const openWebsite = () =>{
+    // Change the link when in production
+    window.open("http://localhost:3000/", "_blank")
+  }
+  const openSchedule = () => {
+    window.open("https://calendly.com/denis-hallvaxhiu/30min", "_blank")
+  }
 
   return (
     <div className="AppsFooter">
@@ -25,7 +31,7 @@ export default function AppsFooter({click}) {
         <span>Start Menu</span>
       </button>
       <button>
-        <img src={MicrosoftEdge} alt="" />
+        <img onClick={openWebsite} src={MicrosoftEdge} alt="" />
         <span>Visit my website</span>
       </button>
       <button onClick={handleEmailClick}>
@@ -33,7 +39,7 @@ export default function AppsFooter({click}) {
         <span>Send me an email</span>
       </button>
       <button>
-        <img src={Calendar} alt="" />
+        <img onClick={openSchedule} src={Calendar} alt="" />
         <span>Let's schedule</span>
       </button>
     </div>

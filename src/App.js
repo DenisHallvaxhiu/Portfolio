@@ -13,8 +13,7 @@ import Phone from "./assets/Phone.png";
 import Mail from "./assets/Mail.png";
 import Share from "./assets/Share.png";
 import ResumePdf from "./assets/Resume/Resume+Denis+Hallvaxhiu.pdf";
-import Up from "./assets/Up.png"
-
+import Up from "./assets/Up.png";
 
 function App() {
   const [startMenu, setStartMenu] = useState(false);
@@ -22,10 +21,21 @@ function App() {
   const [openModal, setOpenModal] = useState(false);
   let startMenuRef = useRef();
 
-  const recipientEmail = 'dhallvaxhiu999@gmail.com';
+  const recipientEmail = "dhallvaxhiu999@gmail.com";
 
   const handleEmailClick = () => {
     window.location.href = `mailto:${recipientEmail}`;
+  };
+
+  const share = () => {
+    if (navigator.share) {
+      navigator.share({
+        text: "Portfolio Website - Denis Hallvaxhiu",
+        // Change when pushed
+        url: "http://localhost:3000/",
+        title: "Portfolio"
+      })
+    }
   };
 
   useEffect(() => {
@@ -159,7 +169,7 @@ function App() {
                   <div>
                     <img src={Phone} alt="Phone" />
                     <img onClick={handleEmailClick} src={Mail} alt="Mail" />
-                    <img src={Share} alt="Share" />
+                    <img onClick={share} src={Share} alt="Share" />
                   </div>
                 ) : (
                   <div>
