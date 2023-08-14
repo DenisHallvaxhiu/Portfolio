@@ -94,14 +94,7 @@ export default function Main({ check }) {
         fullScreenFunc();
       },
     },
-    // {
-    //   icon: MacApple,
-    //   header: "Mac",
-    //   shortcut: false,
-    //   function: () => {
-    //     console.log(apps[0].header);
-    //   },
-    // },
+
   ];
   return (
     <main className="main">

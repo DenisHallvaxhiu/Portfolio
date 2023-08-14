@@ -1,0 +1,45 @@
+.widget-container{
+    margin-top: 20px;
+    height: 170px;
+    width: 100%;
+    
+}
+.widget{  
+    margin: 0 auto;
+    padding: 20px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.widget > .time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: rgb(209, 209, 209);
+}
+.widget > .time > h1{
+    font-size: 25px;
+}
+.widget > .time > div >h2{
+    font-size: 16px;
+}
+.widget > .weather{
+    height: auto;
+    color: rgb(209, 209, 209);
+
+}
+.widget > .weather > svg{
+    height: 50px;
+}
+.widget > .weather > h5:nth-child(1){
+    font-size: 28px;
+}
+.widget > .weather > h5:nth-child(3){
+    font-size: 16px;
+}
