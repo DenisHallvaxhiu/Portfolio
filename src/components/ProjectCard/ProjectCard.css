@@ -36,3 +36,11 @@
     height: 90%;
     border-radius: 10px;
 }
+@media screen and (max-width: 1199px) {
+    .header > div > h3{
+        font-size: 16px;
+    }
+    .header > div > h4{
+        font-size: 14px;
+    }
+}

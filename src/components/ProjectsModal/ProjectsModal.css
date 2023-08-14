@@ -78,3 +78,22 @@
     margin-left: 100%;
     transition: margin 0.5s ease-in-out;
 }
+
+@media screen and (max-width: 1199px) {
+    .project-container > .projects{
+        justify-content: center;
+    }
+
+    .projects > div{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 699px) {
+    .projects > div{
+        height: 300px;
+    }
+    .project-container > h1{
+        padding: 1% 5%;
+    }
+}
