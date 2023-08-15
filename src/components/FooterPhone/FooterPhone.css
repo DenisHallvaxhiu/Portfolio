@@ -1,23 +1,69 @@
-.phone-footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    gap: 15px;
+.phone-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 15px;
 }
-.phone-footer > div{
-    height: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.phone-footer > div {
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.phone-footer > div > img{
-    padding: 5px;
-    height: 85%;
+.phone-footer > div > img {
+  padding: 5px;
+  height: 85%;
+}
+.contactMenu-container {
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.contactMenu-container > div {
+  padding: 25px 15px;
+  margin: 15% auto;
+  width: 60%;
+  min-width: 300px;
+  min-height: 475px;
+  height: 60%;
+  background-color: rgba(46, 46, 46, 255);
+  border: 1px solid rgb(84, 84, 84);
+  border-radius: 20px;
+  color: white;
+}
+.contactMenu-container > div > .icons {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.contactMenu-container > div > h3,
+.contactMenu-container > div > h2{
+    text-align: center;
+}
+.contactMenu-container > div > .icons > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contactMenu-container > div > .icons > div > img {
+  width: 30px;
+}
+.contactMenu-container > div > span {
+  color: rgb(173, 173, 173);
+}
+.contactMenu-container > div > hr{
+    margin: 5px 0;
 }
