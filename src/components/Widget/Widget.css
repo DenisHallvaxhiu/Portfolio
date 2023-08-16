@@ -1,45 +1,29 @@
+.notification{
+    height: 30px;
+    backdrop-filter: blur(7px);
+}
 .widget-container{
-    margin-top: 20px;
+    margin-top: 10px;
     height: 170px;
     width: 100%;
-    
 }
-.widget{  
-    margin: 0 auto;
-    padding: 20px;
-    width: 60%;
+.widget-container > .widget{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    color: white;
+}
+.widget-container > .widget > .weather > svg{
+    margin-right: 5px;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+}
+.widget-container > .widget > .weather > h5{
+    font-size: 22px;
 }
 
-.widget > .time{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    color: rgb(209, 209, 209);
-}
-.widget > .time > h1{
-    font-size: 25px;
-}
-.widget > .time > div >h2{
-    font-size: 16px;
-}
-.widget > .weather{
-    height: auto;
-    color: rgb(209, 209, 209);
-
-}
-.widget > .weather > svg{
-    height: 50px;
-}
-.widget > .weather > h5:nth-child(1){
-    font-size: 28px;
-}
-.widget > .weather > h5:nth-child(3){
-    font-size: 16px;
+.widget-container > .widget > h4 {
+    font-size: 20px;
 }

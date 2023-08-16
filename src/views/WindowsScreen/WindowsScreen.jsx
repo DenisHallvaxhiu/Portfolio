@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import "./WindowsScreen.css"
+import "./WindowsScreen.css";
 import Background from "../../assets/Blue Ribbon Window 11.jpg";
 import Footer from "../../components/Footer/Footer";
 import Main from "../../components/Main/Main";
@@ -33,8 +33,8 @@ function WindowsScreen() {
         text: "Portfolio Website - Denis Hallvaxhiu",
         // Change when pushed
         url: "https://denis-hallvaxhiu-portfolio.netlify.app/",
-        title: "Portfolio"
-      })
+        title: "Portfolio",
+      });
     }
   };
 
@@ -144,11 +144,12 @@ function WindowsScreen() {
                         <span>2 years</span>
 
                         <p>Skills</p>
-                        <span>
-                          Flutter, Dart UI/UX JavaScript, TypeScript NodeJS,
-                          Express, Ionic MongoDB, Firebase, Parse Server HTML,
-                          CSS, CI/CD, REST, Git
-                        </span>
+                        <div>
+                          <span>Html Css Javascript UI/UX </span>
+                          <span>React Vue3 Angular Streamlit </span>
+                          <span>NodeJS ExpressJS FastAPI Flask </span>
+                          <span>SQL MangoDB Git </span>
+                        </div>
                       </div>
                     </div>
                   </motion.div>

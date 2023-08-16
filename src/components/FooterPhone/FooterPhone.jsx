@@ -9,7 +9,7 @@ import Mail from "../../assets/Mail.png";
 import Share from "../../assets/Share.png";
 
 export default function FooterPhone() {
-  const [contactMenu, setContactMenu] = useState(true);
+  const [contactMenu, setContactMenu] = useState(false);
   let contactMenuRef = useRef();
 
   const openPhoneApp = () => {
@@ -91,10 +91,10 @@ export default function FooterPhone() {
               <p>2 years</p>
               <hr />
               <span>Skills</span>
-              <p>Html Css Javascript UI/UX</p>
-              <p>React Vue3 Angular Streamlit</p>
-              <p>NodeJS ExpressJS FastAPI Flask</p>
-              <p>SQL MangoDB Git</p>
+              <p>Html Css Javascript UI/UX </p>
+              <p>React Vue3 Angular Streamlit </p>
+              <p>NodeJS ExpressJS FastAPI Flask </p>
+              <p>SQL MangoDB Git </p>
             </motion.div>
           </div>
         )}

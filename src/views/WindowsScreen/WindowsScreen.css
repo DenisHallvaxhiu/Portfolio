@@ -82,10 +82,10 @@
   padding: 10px 2px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .upper > .expandedMenu > div > div > * {
-  flex-basis: 50%;
+  flex-basis: 45%;
 }
 .startMenu-container > .startMenu > .lower {
   border-radius: 0 0 20px 20px;

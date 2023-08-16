@@ -16,39 +16,20 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Widget() {
-  const daysOfWeek = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  const getDayOfWeek = () => {
-    const today = new Date();
-    const indexOfDate = today.getDay();
-    return `${daysOfWeek[indexOfDate]}`;
-  };
+  const [weatherData, setWeatherData] = useState(null);
+  
   const getTimeString = () => {
     const now = new Date();
     const hours = now.getHours();
     const minutes = now.getMinutes();
     const amOrPm = hours >= 12 ? "PM" : "AM";
-
+    
     const formattedTime = `${hours % 12 === 0 ? 12 : hours % 12}:${
       minutes < 10 ? "0" : ""
     }${minutes} ${amOrPm}`;
     return formattedTime;
   };
   const [currentTime, setCurrentTime] = useState(getTimeString());
-  const getDateString = () => {
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = today.getMonth() + 1;
-    const day = today.getDate();
-    return `${month}/${day}/${year}`;
-  };
 
   const updateTime = () => {
     setCurrentTime(getTimeString());
@@ -59,7 +40,6 @@ export default function Widget() {
     return () => clearInterval(intervalId);
   });
 
-  const [weatherData, setWeatherData] = useState(null);
   const apiKey = "0fdd2b72504fbc8706040b30ab60441e";
   const city = "Boston";
 
@@ -152,7 +132,6 @@ export default function Widget() {
     }
   };
 
-
   let iconElement;
   if (weatherData) {
     iconElement = iconPicker(weatherData.weather[0].description);
@@ -160,20 +139,16 @@ export default function Widget() {
 
   return (
     <>
+      <div className="notification"></div>
       <div className="widget-container">
         {weatherData && (
           <div className="widget">
-            <div className="time">
-              <h1>{currentTime}</h1>
-              <div>
-                <h2>{getDateString()}</h2>
-                <h2>{getDayOfWeek()}</h2>
-              </div>
-            </div>
             <div className="weather">
-              <h5>{convertKelvinToCelsius(weatherData.main.temp)}°C</h5>
               {iconElement}
-              </div>
+              <h5>{convertKelvinToCelsius(weatherData.main.temp)}°C</h5>
+            </div>
+            <h4>{currentTime}</h4>
+            <h3>Boston</h3>
           </div>
         )}
       </div>
