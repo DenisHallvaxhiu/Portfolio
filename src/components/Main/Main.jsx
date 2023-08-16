@@ -11,7 +11,7 @@ import Shortcut from "../../assets/Shortcut.png";
 import ResumePdf from "../../assets/Resume/Resume+Denis+Hallvaxhiu.pdf";
 import ProjectsModal from "../ProjectsModal/ProjectsModal";
 
-export default function Main({ check }) {
+export default function Main({ check,phone }) {
   const [fullScreen, setFullScreen] = useState(false);
   const [openProjectModal, setOpenProjectModal] = useState(false);
   const [count, setCount] = useState(0);
@@ -97,7 +97,7 @@ export default function Main({ check }) {
 
   ];
   return (
-    <main className="main">
+    <main className={`main ${phone ? 'phone' : ''}`}>
       <div className="app-container">
         {apps.map((content, index) => (
           <motion.div
