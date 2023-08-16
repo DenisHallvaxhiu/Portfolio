@@ -83,7 +83,7 @@
   width: 95vw;
   top: 2.5vh;
   left: 2.5vw;
-  height: 90vh;
+  height: 85vh;
 }
 @media screen and (max-width: 1199px) {
   .project-container > .projects {
