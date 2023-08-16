@@ -27,7 +27,7 @@ export default function ProjectInfo({ close, object }) {
           <p>{object.company}</p>
         </div>
         <div className="info-item">
-          <h2>Language</h2>
+          <h2>Language</h2> 
           <h1>{object.languageLogo}</h1>
           <p>{object.language}</p>
         </div>

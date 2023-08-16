@@ -15,7 +15,7 @@ import NFL from "../../assets/NFL.svg";
 import NFLImage from "../../assets/NFL_image.webp";
 import ProjectInfo from "../ProjectInfo/ProjectInfo";
 
-export default function ProjectsModal({ open, close }) {
+export default function ProjectsModal({ open, close,phone }) {
   const [loading, setLoading] = useState(false);
   const [startAnimation, setStartAnimation] = useState(false);
   const [project, setProject] = useState(0);
@@ -169,7 +169,7 @@ export default function ProjectsModal({ open, close }) {
             )}
           </div>
 
-          <div className="projectInfo" style={transitionProperties}>
+          <div className={`projectInfo ${phone ? "phoneProjectInfo": ""}`} style={transitionProperties}>
             <ProjectInfo
               object={ProjectCards[project]}
               close={() => setStartAnimation(!startAnimation)}

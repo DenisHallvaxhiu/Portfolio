@@ -2,6 +2,9 @@
     padding: 10px;
     color: white;
 }
+.phoneProjectInfo{
+    padding: 10px 0;
+}
 .projectInfo > .backButton{
     padding: 5px 0;
 }
@@ -28,6 +31,7 @@
     justify-content: flex-start;
     align-items: center;
 }
+
 .projectInfo > .header > img{
     width: 110px;
     height: 110px;
@@ -36,7 +40,20 @@
 .projectInfo > .header > div{
     margin-left: 10px;
 }
-
+.phoneProjectInfo  > .projectInfo > .header > img{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+.phoneProjectInfo  > .projectInfo > .header > div > h1{
+    font-size: 18px;
+}
+.phoneProjectInfo  > .projectInfo > .header > div > h3{
+    font-size: 16px;
+}
+.phoneProjectInfo  > .projectInfo > .header > div > p{
+    font-size: 15px;
+}
 .projectInfo > .info {
     height: 130px;
     width: 100%;
@@ -69,7 +86,24 @@
 .projectInfo > .info > .info-item > img{
     height: 60px;
 }
-
+.phoneProjectInfo  > .projectInfo > .info{
+    padding: 15px 0;
+}
+.phoneProjectInfo  > .projectInfo > .info > .info-item{
+    margin: 0;
+    text-align: center;
+}
+.phoneProjectInfo  > .projectInfo > .info > .info-item > h2{
+    font-size: 14px;
+}
+.phoneProjectInfo  > .projectInfo > .info > .info-item > img,
+.phoneProjectInfo  > .projectInfo > .info > .info-item > h1{
+    width: 38px;
+    height: 38px;
+}
+.phoneProjectInfo  > .projectInfo > .info > .info-item > p{
+    font-size: 10px;
+}
 .projectInfo > .about{
     padding: 10px;
 }
@@ -84,7 +118,16 @@
 .projectInfo > .about > p{
     padding: 20px 0;
 }
-
+.phoneProjectInfo  > .projectInfo > .about > h1,
+.phoneProjectInfo  > .projectInfo > .detailInfo > h1{
+    font-size: 20px;
+}
+.phoneProjectInfo  > .projectInfo > .about > span{
+    font-size: 12px;
+}
+.phoneProjectInfo  > .projectInfo > .about > p{
+    font-size: 14px;
+}
 .projectInfo > .detailInfo{
     padding: 10px;
 }
@@ -106,4 +149,11 @@
 
 .detailInfo > .detailInfo-container > div > p{
     font-size: 17px;
+}
+
+.phoneProjectInfo  > .projectInfo > .detailInfo {
+    padding: 10px 0;
+}
+.phoneProjectInfo  > .projectInfo > .detailInfo > .detailInfo-container {
+    padding: 10px 0;
 }

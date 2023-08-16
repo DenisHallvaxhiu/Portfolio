@@ -118,6 +118,7 @@ export default function Main({ check,phone }) {
       <ProjectsModal
         open={openProjectModal}
         close={() => setOpenProjectModal(false)}
+        phone= {phone}
       />
     </main>
   );
