@@ -12,8 +12,6 @@ import AgriCaptureLogo from "../../assets/Projects/AgriCaptureLogo.png"
 import AgriCaptureCover from "../../assets/Projects/AgriCaptureCover.png"
 import ScriptChainHealthLogo from "../../assets/Projects/ScriptChainHealthLogo.svg"
 import ScriptChainHealthCover from "../../assets/Projects/ScriptChainHealthCover.png"
-import NFL from "../../assets/NFL.svg";
-import NFLImage from "../../assets/NFL_image.webp";
 import ProjectInfo from "../ProjectInfo/ProjectInfo";
 
 export default function ProjectsModal({ open, close, phone }) {
