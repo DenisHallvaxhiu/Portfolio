@@ -148,7 +148,7 @@ function WindowsScreen() {
                           <span>Html Css Javascript UI/UX </span>
                           <span>React Vue3 Angular Streamlit </span>
                           <span>NodeJS ExpressJS FastAPI Flask </span>
-                          <span>SQL MangoDB Git </span>
+                          <span>SQL MongoDB Git </span>
                         </div>
                       </div>
                     </div>

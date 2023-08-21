@@ -1,9 +1,9 @@
 import React from "react";
 import "./ProjectCard.css";
 
-export default function ProjectCard({ logo,image,header,topic,type }) {
+export default function ProjectCard({ logo,image,header,topic,type, hover }) {
   return (
-    <div className="projectCard">
+    <div style={hover? {cursor: 'pointer'} : {}} className="projectCard">
       <div className="header">
         <img src={logo} alt="" />
         <div>
