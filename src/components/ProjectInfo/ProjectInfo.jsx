@@ -47,6 +47,7 @@ export default function ProjectInfo({ close, object }) {
         <h1>About this project</h1>
         <span>{object.time}</span>
         <p>{object.about}</p>
+        <span>Tools utilized: {object.toolsUsed}</span>
       </div>
       <hr />
       <div className="detailInfo">

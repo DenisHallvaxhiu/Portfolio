@@ -94,7 +94,7 @@ export default function FooterPhone() {
               <p>Html Css Javascript UI/UX </p>
               <p>React Vue3 Angular Streamlit </p>
               <p>NodeJS ExpressJS FastAPI Flask </p>
-              <p>SQL MangoDB Git </p>
+              <p>SQL MongoDB Git </p>
             </motion.div>
           </div>
         )}

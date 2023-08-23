@@ -14,11 +14,11 @@ import ScriptChainHealthLogo from "../../assets/Projects/ScriptChainHealthLogo.s
 import ScriptChainHealthCover from "../../assets/Projects/ScriptChainHealthCover.png";
 import ProjectInfo from "../ProjectInfo/ProjectInfo";
 
-import MetaLogo from "../../assets/Projects/MetaLogo.png"
-import AdvReact from "../../assets/Projects/AdvReactCert.png"
-import UXUI from "../../assets/Projects/UX-UICert.png"
-import UdemyLogo from "../../assets/Projects/UdemyLogo.png"
-import WebDev from "../../assets/Projects/WebDevCert.png"
+import MetaLogo from "../../assets/Projects/MetaLogo.png";
+import AdvReact from "../../assets/Projects/AdvReactCert.png";
+import UXUI from "../../assets/Projects/UX-UICert.png";
+import UdemyLogo from "../../assets/Projects/UdemyLogo.png";
+import WebDev from "../../assets/Projects/WebDevCert.png";
 
 export default function ProjectsModal({ open, close, phone }) {
   const [loading, setLoading] = useState(false);
@@ -47,10 +47,10 @@ export default function ProjectsModal({ open, close, phone }) {
       languageLogo: "EN",
       platform: "Website / Mobile",
       time: "Nov 2022 - Dec 2022",
-      about: `This React project serves as a practical application of my newly acquired skills. It's a social media website with a variety of features, including secure login, profile management, content posting, and messaging capabilities. 
-         The technologies harnessed for this project are both diverse and contemporary. Notable components include React for frontend development, Node.js along with Express.js for backend implementation, and MongoDB for efficient data management. Furthermore, the integration of sockets adds a real-time aspect to the messaging feature, enhancing user interaction and experience.`,
+      about: `This React project serves as a practical application of my newly acquired skills. It's a social media website with a variety of features, including secure login, profile management, content posting, and messaging capabilities. `,
       team: 1,
       duration: "1 months",
+      toolsUsed: "React, NodeJS, ExpressJS, Redux, MongoDB, Socket.io, RestAPI, Framer Motion, Git",
     },
     {
       id: 1,
@@ -68,6 +68,7 @@ export default function ProjectsModal({ open, close, phone }) {
         "My team and I collaboratively engineered a Power BI project that seamlessly integrates a three-dimensional representation of our warehouse infrastructure. Within this framework, we introduced a suite of advanced functionalities, including a robust search engine, workflow optimization tools, and comprehensive data analytics capabilities.",
       team: 2,
       duration: "< 1 months",
+      toolsUsed: "PowerBI, SketchUp, 3D Modeling, 3DKI, DAX",
     },
     {
       id: 2,
@@ -85,6 +86,7 @@ export default function ProjectsModal({ open, close, phone }) {
         "My team and I have undertaken the development of a sophisticated MapboxGL application meticulously illustrating the geographic distribution of our corporate office locations. This endeavor has been enhanced with an array of functional augmentations, including the refinement of customer connectivity, meticulous error identification within stock placements, the systematic enhancement of said locations and more.",
       team: 2,
       duration: "4 months",
+      toolsUsed: "Vue3, VueX, Python, FastAPI, MapBoxGL, Typesense, Redis, Docker, Motion, SQL, Git",
     },
     {
       id: 3,
@@ -102,6 +104,7 @@ export default function ProjectsModal({ open, close, phone }) {
         "Conceived and executed the creation of an innovative landing page, characterized by its refined design and meticulous attention to detail. This new landing page seamlessly integrates comprehensive company information, fostering a heightened level of interactivity and other value-added features. As a result, user experience has been markedly elevated, contributing to an enhanced and engaging online interaction.",
       team: 1,
       duration: "2 months",
+      toolsUsed: "Angular, NodeJS, Wordpress, Python, SQL, Git"
     },
     {
       id: 4,
@@ -119,15 +122,37 @@ export default function ProjectsModal({ open, close, phone }) {
         "A collaborative effort undertaken by my team and myself culminated in the meticulous creation of an entirely new landing page, originating from the ground up. This undertaking involved the seamless integration of an array of robust functionalities, including a versatile search engine, a dynamic blog posting system, streamlined job application procedures, and a host of other feature enhancements. Moreover, an entirely new suite of API calls was meticulously crafted within the backend infrastructure, effectively facilitating the secure and efficient transfer of data to the frontend, thereby fortifying both the integrity and security of the system.",
       team: 3,
       duration: "5 months",
+      toolsUsed: "Angular, NodeJs, ExpressJS, RestAPI, Search Engine, MySQL, Git"
     },
   ];
 
   const transitionProperties = startAnimation ? { marginLeft: "0" } : {};
   const Certifications = [
-    {id:0, logo: MetaLogo, image:AdvReact,header:"Advanced React",topic:"React Web Dev",type:"Certification"},
-    {id:0, logo: MetaLogo, image:UXUI,header:"Principles of UX/UI Design",topic:"UX/UI Design",type:"Certification"},
-    {id:0, logo: UdemyLogo, image:WebDev,header:"Web Developer Bootcamp 2022",topic:"Web Dev",type:"Certification"},
-  ]
+    {
+      id: 0,
+      logo: MetaLogo,
+      image: AdvReact,
+      header: "Advanced React",
+      topic: "React Web Dev",
+      type: "Certification",
+    },
+    {
+      id: 0,
+      logo: MetaLogo,
+      image: UXUI,
+      header: "Principles of UX/UI Design",
+      topic: "UX/UI Design",
+      type: "Certification",
+    },
+    {
+      id: 0,
+      logo: UdemyLogo,
+      image: WebDev,
+      header: "Web Developer Bootcamp 2022",
+      topic: "Web Dev",
+      type: "Certification",
+    },
+  ];
   return (
     <AnimatePresence>
       {open && (
@@ -169,6 +194,7 @@ export default function ProjectsModal({ open, close, phone }) {
                       }}
                     >
                       <ProjectCard
+                        hover={true}
                         logo={context.logo}
                         image={context.image}
                         header={context.header}
@@ -184,11 +210,9 @@ export default function ProjectsModal({ open, close, phone }) {
                 <hr />
                 <div className="projects">
                   {Certifications.map((context) => (
-                    <div
-                      key={context.id}
-
-                    >
+                    <div key={context.id}>
                       <ProjectCard
+                        hover={false}
                         logo={context.logo}
                         image={context.image}
                         header={context.header}
