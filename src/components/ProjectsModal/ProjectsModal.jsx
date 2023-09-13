@@ -13,12 +13,14 @@ import AgriCaptureCover from "../../assets/Projects/AgriCaptureCover.png";
 import ScriptChainHealthLogo from "../../assets/Projects/ScriptChainHealthLogo.svg";
 import ScriptChainHealthCover from "../../assets/Projects/ScriptChainHealthCover.png";
 import ProjectInfo from "../ProjectInfo/ProjectInfo";
-
+import ReactIcon from "../../assets/ReactIcon.png"
+import ChatApp from "../../assets/WebApp.png"
 import MetaLogo from "../../assets/Projects/MetaLogo.png";
 import AdvReact from "../../assets/Projects/AdvReactCert.png";
 import UXUI from "../../assets/Projects/UX-UICert.png";
 import UdemyLogo from "../../assets/Projects/UdemyLogo.png";
 import WebDev from "../../assets/Projects/WebDevCert.png";
+import MetaSpecializationFrontend from "../../assets/Projects/MetaFrontEndSpecialization.png"
 
 export default function ProjectsModal({ open, close, phone }) {
   const [loading, setLoading] = useState(false);
@@ -52,26 +54,9 @@ export default function ProjectsModal({ open, close, phone }) {
       duration: "1 months",
       toolsUsed: "React, NodeJS, ExpressJS, Redux, MongoDB, Socket.io, RestAPI, Framer Motion, Git",
     },
+
     {
       id: 1,
-      logo: ServiceExpressLogo,
-      image: WarehouseCover,
-      header: "Warehouse App",
-      topic: "3D Dev",
-      type: "PowerBI",
-      company: "Service Express",
-      language: "English",
-      languageLogo: "EN",
-      platform: "PowerBi",
-      time: "Apr 2023 - May 2023",
-      about:
-        "My team and I collaboratively engineered a Power BI project that seamlessly integrates a three-dimensional representation of our warehouse infrastructure. Within this framework, we introduced a suite of advanced functionalities, including a robust search engine, workflow optimization tools, and comprehensive data analytics capabilities.",
-      team: 2,
-      duration: "< 1 months",
-      toolsUsed: "PowerBI, SketchUp, 3D Modeling, 3DKI, DAX",
-    },
-    {
-      id: 2,
       logo: ServiceExpressLogo,
       image: SparingAppCover,
       header: "Geospatical App",
@@ -89,7 +74,7 @@ export default function ProjectsModal({ open, close, phone }) {
       toolsUsed: "Vue3, VueX, Python, FastAPI, MapBoxGL, Typesense, Redis, Docker, Motion, SQL, Git",
     },
     {
-      id: 3,
+      id: 2,
       logo: AgriCaptureLogo,
       image: AgriCaptureCover,
       header: "AgriCapture",
@@ -107,7 +92,7 @@ export default function ProjectsModal({ open, close, phone }) {
       toolsUsed: "Angular, NodeJS, Wordpress, Python, SQL, Git"
     },
     {
-      id: 4,
+      id: 3,
       logo: ScriptChainHealthLogo,
       image: ScriptChainHealthCover,
       header: "ScriptChain Health",
@@ -124,6 +109,42 @@ export default function ProjectsModal({ open, close, phone }) {
       duration: "5 months",
       toolsUsed: "Angular, NodeJs, ExpressJS, RestAPI, Search Engine, MySQL, Git"
     },
+    {
+      id: 4,
+      logo: ReactIcon,
+      image: ChatApp,
+      header: "Chat App",
+      topic: "Social",
+      type: "Website",
+      company: "Personal Project",
+      language: "English",
+      languageLogo: "EN",
+      platform: "Website / Mobile",
+      time: "Aug 2023 - Sep 2023",
+      about:
+        "This React project serves as a practical application of my newly acquired skills. It's a website inspired from chatting devices, giving the ability to communicate with other users on the server.",
+      team: 1,
+      duration: "< 1 months",
+      toolsUsed: "React, NodeJS, ExpressJS, Socket.Io, Git",
+    },
+    {
+      id: 5,
+      logo: ServiceExpressLogo,
+      image: WarehouseCover,
+      header: "Warehouse App",
+      topic: "3D Dev",
+      type: "PowerBI",
+      company: "Service Express",
+      language: "English",
+      languageLogo: "EN",
+      platform: "PowerBi",
+      time: "Apr 2023 - May 2023",
+      about:
+        "My team and I collaboratively engineered a Power BI project that seamlessly integrates a three-dimensional representation of our warehouse infrastructure. Within this framework, we introduced a suite of advanced functionalities, including a robust search engine, workflow optimization tools, and comprehensive data analytics capabilities.",
+      team: 2,
+      duration: "< 1 months",
+      toolsUsed: "PowerBI, SketchUp, 3D Modeling, 3DKI, DAX",
+    },
   ];
 
   const transitionProperties = startAnimation ? { marginLeft: "0" } : {};
@@ -131,13 +152,21 @@ export default function ProjectsModal({ open, close, phone }) {
     {
       id: 0,
       logo: MetaLogo,
+      image: MetaSpecializationFrontend,
+      header: "Meta Front End Specialization",
+      topic: "React Web Dev",
+      type: "Certification",
+    },
+    {
+      id: 1,
+      logo: MetaLogo,
       image: AdvReact,
       header: "Advanced React",
       topic: "React Web Dev",
       type: "Certification",
     },
     {
-      id: 0,
+      id: 2,
       logo: MetaLogo,
       image: UXUI,
       header: "Principles of UX/UI Design",
@@ -145,7 +174,7 @@ export default function ProjectsModal({ open, close, phone }) {
       type: "Certification",
     },
     {
-      id: 0,
+      id: 3,
       logo: UdemyLogo,
       image: WebDev,
       header: "Web Developer Bootcamp 2022",
