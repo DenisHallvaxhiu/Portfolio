@@ -12,7 +12,7 @@ import Profile from "../../assets/Profile.png";
 import Phone from "../../assets/Phone.png";
 import Mail from "../../assets/Mail.png";
 import Share from "../../assets/Share.png";
-import ResumePdf from "../../assets/Resume/Resume+Denis+Hallvaxhiu.pdf";
+import ResumePdf from "../../assets/Resume/Denis Hallvaxhiu Software Engineer.pdf";
 import Up from "../../assets/Up.png";
 
 function WindowsScreen() {

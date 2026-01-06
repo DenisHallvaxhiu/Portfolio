@@ -13,14 +13,16 @@ import AgriCaptureCover from "../../assets/Projects/AgriCaptureCover.png";
 import ScriptChainHealthLogo from "../../assets/Projects/ScriptChainHealthLogo.svg";
 import ScriptChainHealthCover from "../../assets/Projects/ScriptChainHealthCover.png";
 import ProjectInfo from "../ProjectInfo/ProjectInfo";
-import ReactIcon from "../../assets/ReactIcon.png"
-import ChatApp from "../../assets/WebApp.png"
+import ReactIcon from "../../assets/ReactIcon.png";
+import ChatApp from "../../assets/WebApp.png";
 import MetaLogo from "../../assets/Projects/MetaLogo.png";
 import AdvReact from "../../assets/Projects/AdvReactCert.png";
 import UXUI from "../../assets/Projects/UX-UICert.png";
 import UdemyLogo from "../../assets/Projects/UdemyLogo.png";
 import WebDev from "../../assets/Projects/WebDevCert.png";
-import MetaSpecializationFrontend from "../../assets/Projects/MetaFrontEndSpecialization.png"
+import MetaSpecializationFrontend from "../../assets/Projects/MetaFrontEndSpecialization.png";
+import KitchenChaosLogo from "../../assets/KitchenChaosLogo.png";
+import KitchenChaosCover from "../../assets/KitchenChaos.png";
 
 export default function ProjectsModal({ open, close, phone }) {
   const [loading, setLoading] = useState(false);
@@ -39,78 +41,24 @@ export default function ProjectsModal({ open, close, phone }) {
   const ProjectCards = [
     {
       id: 0,
-      logo: SocialMedia,
-      image: SocialMediaCover,
-      header: "Social Media React",
-      topic: "Social",
-      type: "Website Application",
-      company: "Personal Project",
-      language: "English",
-      languageLogo: "EN",
-      platform: "Website / Mobile",
-      time: "Nov 2022 - Dec 2022",
-      about: `This React project serves as a practical application of my newly acquired skills. It's a social media website with a variety of features, including secure login, profile management, content posting, and messaging capabilities. `,
-      team: 1,
-      duration: "1 months",
-      toolsUsed: "React, NodeJS, ExpressJS, Redux, MongoDB, Socket.io, RestAPI, Framer Motion, Git",
-    },
-
-    {
-      id: 1,
       logo: ServiceExpressLogo,
-      image: SparingAppCover,
-      header: "Geospatical App",
-      topic: "Maps",
-      type: "Website Application",
+      image: WarehouseCover,
+      header: "Warehouse App",
+      topic: "3D Dev",
+      type: "PowerBI",
       company: "Service Express",
       language: "English",
       languageLogo: "EN",
-      platform: "Website",
-      time: "Apr 2023 - July 2023",
+      platform: "PowerBi",
+      time: "Apr 2023 - May 2023",
       about:
-        "My team and I have undertaken the development of a sophisticated MapboxGL application meticulously illustrating the geographic distribution of our corporate office locations. This endeavor has been enhanced with an array of functional augmentations, including the refinement of customer connectivity, meticulous error identification within stock placements, the systematic enhancement of said locations and more.",
+        "My team and I collaboratively engineered a Power BI project that seamlessly integrates a three-dimensional representation of our warehouse infrastructure. Within this framework, we introduced a suite of advanced functionalities, including a robust search engine, workflow optimization tools, and comprehensive data analytics capabilities.",
       team: 2,
-      duration: "4 months",
-      toolsUsed: "Vue3, VueX, Python, FastAPI, MapBoxGL, Typesense, Redis, Docker, Motion, SQL, Git",
+      duration: "< 1 months",
+      toolsUsed: "PowerBI, SketchUp, 3D Modeling, 3DKI, DAX",
     },
     {
-      id: 2,
-      logo: AgriCaptureLogo,
-      image: AgriCaptureCover,
-      header: "AgriCapture",
-      topic: "Landing Page",
-      type: "Website",
-      company: "AgriCapture",
-      language: "English",
-      languageLogo: "EN",
-      platform: "Website",
-      time: "Oct 2022 - Dec 2022",
-      about:
-        "Conceived and executed the creation of an innovative landing page, characterized by its refined design and meticulous attention to detail. This new landing page seamlessly integrates comprehensive company information, fostering a heightened level of interactivity and other value-added features. As a result, user experience has been markedly elevated, contributing to an enhanced and engaging online interaction.",
-      team: 1,
-      duration: "2 months",
-      toolsUsed: "Angular, NodeJS, Wordpress, Python, SQL, Git"
-    },
-    {
-      id: 3,
-      logo: ScriptChainHealthLogo,
-      image: ScriptChainHealthCover,
-      header: "ScriptChain Health",
-      topic: "Landing Page",
-      type: "Website",
-      company: "ScriptChain Health",
-      language: "English",
-      languageLogo: "EN",
-      platform: "Website",
-      time: "Apr 2022 - Sep 2022",
-      about:
-        "A collaborative effort undertaken by my team and myself culminated in the meticulous creation of an entirely new landing page, originating from the ground up. This undertaking involved the seamless integration of an array of robust functionalities, including a versatile search engine, a dynamic blog posting system, streamlined job application procedures, and a host of other feature enhancements. Moreover, an entirely new suite of API calls was meticulously crafted within the backend infrastructure, effectively facilitating the secure and efficient transfer of data to the frontend, thereby fortifying both the integrity and security of the system.",
-      team: 3,
-      duration: "5 months",
-      toolsUsed: "Angular, NodeJs, ExpressJS, RestAPI, Search Engine, MySQL, Git"
-    },
-    {
-      id: 4,
+      id: 1,
       logo: ReactIcon,
       image: ChatApp,
       header: "Chat App",
@@ -128,22 +76,96 @@ export default function ProjectsModal({ open, close, phone }) {
       toolsUsed: "React, NodeJS, ExpressJS, Socket.Io, Git",
     },
     {
-      id: 5,
+      id: 2,
+      logo: ScriptChainHealthLogo,
+      image: ScriptChainHealthCover,
+      header: "ScriptChain Health",
+      topic: "Landing Page",
+      type: "Website",
+      company: "ScriptChain Health",
+      language: "English",
+      languageLogo: "EN",
+      platform: "Website",
+      time: "Apr 2022 - Sep 2022",
+      about:
+        "A collaborative effort undertaken by my team and myself culminated in the meticulous creation of an entirely new landing page, originating from the ground up. This undertaking involved the seamless integration of an array of robust functionalities, including a versatile search engine, a dynamic blog posting system, streamlined job application procedures, and a host of other feature enhancements. Moreover, an entirely new suite of API calls was meticulously crafted within the backend infrastructure, effectively facilitating the secure and efficient transfer of data to the frontend, thereby fortifying both the integrity and security of the system.",
+      team: 3,
+      duration: "5 months",
+      toolsUsed:
+        "Angular, NodeJs, ExpressJS, RestAPI, Search Engine, MySQL, Git",
+    },
+    {
+      id: 3,
+      logo: AgriCaptureLogo,
+      image: AgriCaptureCover,
+      header: "AgriCapture",
+      topic: "Landing Page",
+      type: "Website",
+      company: "AgriCapture",
+      language: "English",
+      languageLogo: "EN",
+      platform: "Website",
+      time: "Oct 2022 - Dec 2022",
+      about:
+        "Conceived and executed the creation of an innovative landing page, characterized by its refined design and meticulous attention to detail. This new landing page seamlessly integrates comprehensive company information, fostering a heightened level of interactivity and other value-added features. As a result, user experience has been markedly elevated, contributing to an enhanced and engaging online interaction.",
+      team: 1,
+      duration: "2 months",
+      toolsUsed: "Angular, NodeJS, Wordpress, Python, SQL, Git",
+    },
+
+    {
+      id: 4,
       logo: ServiceExpressLogo,
-      image: WarehouseCover,
-      header: "Warehouse App",
-      topic: "3D Dev",
-      type: "PowerBI",
+      image: SparingAppCover,
+      header: "Geospatical App",
+      topic: "Maps",
+      type: "Website Application",
       company: "Service Express",
       language: "English",
       languageLogo: "EN",
-      platform: "PowerBi",
-      time: "Apr 2023 - May 2023",
+      platform: "Website",
+      time: "Apr 2023 - July 2023",
       about:
-        "My team and I collaboratively engineered a Power BI project that seamlessly integrates a three-dimensional representation of our warehouse infrastructure. Within this framework, we introduced a suite of advanced functionalities, including a robust search engine, workflow optimization tools, and comprehensive data analytics capabilities.",
+        "My team and I have undertaken the development of a sophisticated MapboxGL application meticulously illustrating the geographic distribution of our corporate office locations. This endeavor has been enhanced with an array of functional augmentations, including the refinement of customer connectivity, meticulous error identification within stock placements, the systematic enhancement of said locations and more.",
       team: 2,
-      duration: "< 1 months",
-      toolsUsed: "PowerBI, SketchUp, 3D Modeling, 3DKI, DAX",
+      duration: "4 months",
+      toolsUsed:
+        "Vue3, VueX, Python, FastAPI, MapBoxGL, Typesense, Redis, Docker, Motion, SQL, Git",
+    },
+    {
+      id: 5,
+      logo: SocialMedia,
+      image: SocialMediaCover,
+      header: "Social Media React",
+      topic: "Social",
+      type: "Website Application",
+      company: "Personal Project",
+      language: "English",
+      languageLogo: "EN",
+      platform: "Website / Mobile",
+      time: "Nov 2022 - Dec 2022",
+      about: `This React project serves as a practical application of my newly acquired skills. It's a social media website with a variety of features, including secure login, profile management, content posting, and messaging capabilities. `,
+      team: 1,
+      duration: "1 months",
+      toolsUsed:
+        "React, NodeJS, ExpressJS, Redux, MongoDB, Socket.io, RestAPI, Framer Motion, Git",
+    },
+    {
+      id: 6,
+      logo: KitchenChaosLogo,
+      image: KitchenChaosCover,
+      header: "Kitchen Chaos",
+      topic: "Game Dev",
+      type: "Unity Game Development",
+      company: "Personal Project",
+      language: "English",
+      languageLogo: "EN",
+      platform: "PC",
+      time: "Sep 2025 - Nov 2025",
+      about: `Kitchen Chaos is a fast-paced cooking game developed in Unity using C#. Players prepare and deliver dishes under time pressure while managing multiple interactive game systems. This project was built by following a guided Unity tutorial and focuses on core gameplay mechanics and engine workflows.`,
+      team: 1,
+      duration: "2 months",
+      toolsUsed: "Unity Engine, C#, OOP, Git",
     },
   ];
 
@@ -214,7 +236,7 @@ export default function ProjectsModal({ open, close, phone }) {
                 <h1>My Projects</h1>
                 <hr />
                 <div className="projects">
-                  {ProjectCards.map((context) => (
+                  {ProjectCards.reverse().map((context) => (
                     <div
                       key={context.id}
                       onClick={() => {
