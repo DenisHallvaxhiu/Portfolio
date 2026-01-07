@@ -23,6 +23,8 @@ import WebDev from "../../assets/Projects/WebDevCert.png";
 import MetaSpecializationFrontend from "../../assets/Projects/MetaFrontEndSpecialization.png";
 import KitchenChaosLogo from "../../assets/KitchenChaosLogo.png";
 import KitchenChaosCover from "../../assets/KitchenChaos.png";
+import Esp32CamLogo from "../../assets/Esp32Logo.png";
+import Esp32CamCover from "../../assets/Esp32.png";
 
 export default function ProjectsModal({ open, close, phone }) {
   const [loading, setLoading] = useState(false);
@@ -167,6 +169,24 @@ export default function ProjectsModal({ open, close, phone }) {
       duration: "2 months",
       toolsUsed: "Unity Engine, C#, OOP, Git",
     },
+    {
+      id: 7,
+      logo: Esp32CamLogo,
+      image: Esp32CamCover,
+      header: "Home Security System",
+      topic: "Security System",
+      type: "MERN Stack Application",
+      company: "Capstone Project",
+      language: "English",
+      languageLogo: "EN",
+      platform: "PC",
+      time: "Sep 2025 - Dec 2025",
+      about: `Built a full-stack home security camera platform using the MERN stack, integrating multiple ESP32-CAM devices for live video streaming, snapshots, and remote control. The backend proxies and manages multiple cameras, supports recording via FFmpeg, and exposes a secure API consumed by a React dashboard. The system includes user authentication, real-time camera management, and a responsive web interface designed for monitoring, control, and future scalability.`,
+      team: 2,
+      duration: "3 months",
+      toolsUsed:
+        "MERN stack, ESP32-CAM, RESTful APIs, WebSockets, HTML, CSS, JavaScript, Git, JWT authentication",
+    },
   ];
 
   const transitionProperties = startAnimation ? { marginLeft: "0" } : {};
@@ -282,7 +302,7 @@ export default function ProjectsModal({ open, close, phone }) {
             style={transitionProperties}
           >
             <ProjectInfo
-              object={ProjectCards[project]}
+              object={ProjectCards.find((p) => p.id === project)}
               close={() => setStartAnimation(!startAnimation)}
             />
           </div>
